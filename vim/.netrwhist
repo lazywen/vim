@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/data/work/ares/apps/master'
 let g:netrw_dirhist_2='/Users/lazy/Desktop/ChannelPacker/Channel/Android_91'
+let g:netrw_dirhist_3='/data/work/ares/deploy/ios_dev_tool'
+let g:netrw_dirhist_4='/Users/lazy/work/wall_e/admin'
+let g:netrw_dirhist_5='/Users/lazy/.subversion/auth/svn.simple'
+let g:netrw_dirhist_6='/Users/lazywen/work/python/python_tool'
+let g:netrw_dirhist_7='/work'

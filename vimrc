@@ -8,6 +8,7 @@ set nocompatible
 
 " enable syntax highlighting
 syntax enable
+colors freya
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
@@ -38,7 +39,7 @@ set cursorline                                               " set cursor line h
 set shell=bash\ --login                                      " Make bash act as if it had been invoked as a login shell
 
 " Enable basic mouse behavior such as resizing buffers.
-set mouse=a
+" set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
@@ -50,18 +51,19 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>l :Align
-nmap <leader>a :Ack 
-nmap <leader>b :CommandTBuffer<CR>
+nmap <leader>a :Ack
+nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <leader>t :CommandT<CR>
-nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
+nmap <leader>p :set paste<CR>
+nmap <leader>P :set nopaste<CR>
+nmap <leader>t :CtrlP<CR>
+nmap <leader>T :CtrlPTag<CR>
 nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-map <leader>o :tabnew %:h<CR>
 nmap <left> gT
 nmap <right> gt
 
@@ -110,4 +112,4 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " sql formatter
-command SQL SQLUFormatter
+command! SQL SQLUFormatter
